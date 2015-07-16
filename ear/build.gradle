@@ -1,0 +1,12 @@
+apply plugin: 'ear'
+
+dependencies {
+    deploy project(path: rootProject.path, configuration: 'archives')
+}
+
+ear {
+    archiveName = "${rootProject.name}.ear"
+    deploymentDescriptor {
+        displayName = rootProject.name
+    }
+}
